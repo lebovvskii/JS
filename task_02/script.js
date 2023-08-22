@@ -7,13 +7,10 @@ const users = [
 ];
 
 const adult = (users) => {
-    const result = [];
-    for (user of users) {
-        if (user.age >= 18) {
-            result.push(user);
-        }
-    }
-    console.log(result)
+    const result = users.filter(function (user) {
+        return user.age >= 18;
+    })
+    console.log(result);
     return result;
 }
 
