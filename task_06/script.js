@@ -15,16 +15,14 @@ const rootEmployee = {
         ]
       }
     ]
-};
-
-
+}
 
 const result = [];
 
 const getName = (root) => {
-    let name = root.name;
+    const name = root.name;
     result.push(name);
-    let subordinates = root.subordinates;
+    const subordinates = root.subordinates;
     for (subordinate of subordinates) {
         getName(subordinate);
     };
